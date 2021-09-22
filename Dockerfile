@@ -60,14 +60,14 @@ RUN python3 -m ensurepip \
 #
 # Clone repo and prepare working directory
 #
-RUN git clone https://github.com/AvinashReddy3108/PaperplaneExtended /root/userbot
+RUN git clone https://github.com/JanganCrut/PaperplaneExtended /root/userbot
 RUN mkdir /root/userbot/bin/
 WORKDIR /root/userbot/
 
 #
 # Copies session and config (if it exists)
 #
-COPY ./sample_config.env ./userbot.session* ./config.env* /root/userbot/
+COPY ./sample_config.env ./userbot.session* ./config.env* ./client_secrets.json* ./secret.json* /root/userbot/
 
 #
 # Install requirements
